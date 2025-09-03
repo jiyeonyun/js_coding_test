@@ -1,9 +1,9 @@
-function solution(arr)
-{
-    var answer = [];
-   answer=  arr.map((item,i)=>{
-       return  item == arr[i+1] ? undefined: item
-    }).filter(item=>{ return item !== undefined})
-    
+function solution(arr) {
+    let answer = [];
+    arr.forEach((item, idx) => {
+        if (item !== arr[idx - 1]) {
+            answer.push(item);
+        }
+    });
     return answer;
 }
